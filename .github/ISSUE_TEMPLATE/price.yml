@@ -1,0 +1,72 @@
+name: Price or listing is wrong
+description: A price, stock state, seller or product detail does not match the listing
+title: "[Price]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prices are read live from Digikala and change without notice, and every
+        answer says when it was read. If the answer is more than a few hours old,
+        ask the assistant again first — the listed price may simply have moved.
+
+        A price is information, not an offer. The retailer's own page is the one
+        that counts at checkout.
+
+  - type: input
+    id: product-url
+    attributes:
+      label: Product link
+      description: The Digikala page for the item, if you have it.
+      placeholder: https://www.digikala.com/product/dkp-...
+    validations:
+      required: true
+
+  - type: textarea
+    id: answer-said
+    attributes:
+      label: What did the assistant say?
+      description: The price, stock state, seller or specification it reported.
+      placeholder: It said 3,650,000 toman from seller X, read 2 hours ago.
+    validations:
+      required: true
+
+  - type: textarea
+    id: listing-says
+    attributes:
+      label: What does the listing say now?
+      description: The value on the retailer's page, and when you checked it.
+      placeholder: The page shows 3,890,000 toman, checked at 21:10 IRST.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - Price
+        - Stock state (available or out of stock)
+        - Seller
+        - Product specifications
+        - The item is missing from the answer
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: when
+    attributes:
+      label: When did you see it?
+      description: Local date and time with the timezone.
+      placeholder: 2026-10-23 21:15 IRST
+    validations:
+      required: true
+
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else?
+      description: A screenshot of the listing, or the sentence in the answer that was wrong.
+    validations:
+      required: false

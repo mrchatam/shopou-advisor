@@ -1,0 +1,30 @@
+name: Question or suggestion
+description: Ask how something works, or suggest an improvement
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question or idea
+      description: The more specific it is, the more useful the answer.
+      placeholder: Can it compare two complete setups side by side?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (optional)
+      description: What you were shopping for, or what you expected the answer to include.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - English
+        - Persian (فارسی)
+        - Both

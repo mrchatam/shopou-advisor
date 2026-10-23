@@ -1,0 +1,76 @@
+name: Connector problem
+description: It would not connect, sign-in failed, a tool errored, or an answer was clearly wrong
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The connector is read-only, so
+        it cannot have changed an order, a price or anything in your Digikala
+        account.
+
+        **Do not include access tokens, refresh tokens, passwords or personal
+        information.** Nothing in a report needs them.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you get instead?
+      placeholder: I asked for ..., and the answer said ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: asked
+    attributes:
+      label: What did you ask?
+      description: Paste the message you sent, in the words you used.
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did it happen?
+      options:
+        - The connector inside ChatGPT
+        - A direct MCP client (curl, Inspector, another app)
+        - The public website
+    validations:
+      required: true
+
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen?
+      description: Local date and time with the timezone, and whether it happens every time or only once.
+      placeholder: 2026-10-23 21:15 IRST, happens every time
+    validations:
+      required: true
+
+  - type: input
+    id: correlation-id
+    attributes:
+      label: Correlation id (optional)
+      description: Only when you call the service directly. It is the x-correlation-id response header.
+      placeholder: 1f0c9a2b7d4e6f83
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - English
+        - Persian (فارسی)
+        - Both
+
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else?
+      description: The exact error text, a screenshot with tokens hidden, or a link to the question.
+    validations:
+      required: false

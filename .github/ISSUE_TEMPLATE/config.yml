@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support page (English)
+    url: https://advisor.shopou.ir/support
+    about: What to check before writing, and how to reach the operator.
+  - name: صفحهٔ پشتیبانی (فارسی)
+    url: https://advisor.shopou.ir/fa/support
+    about: پیش از نوشتن چه چیزهایی را بررسی کنید و چطور با گرداننده تماس بگیرید.
