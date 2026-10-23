@@ -15,10 +15,13 @@ server code is private; nothing here runs the connector.
 
 ## Using it
 
-1. In ChatGPT, open **Settings → Apps & Connectors**.
-2. Choose **Create**, give it a name, and paste the connector address:
-   `https://advisor.shopou.ir/mcp`.
-3. Ask in your own words — a goal, a budget and what you already own:
+1. In ChatGPT, select **Plugins** in the left sidebar.
+2. Choose **Add → Add custom MCP server**, give it a name, and paste the connector
+   address as the **Server URL**: `https://advisor.shopou.ir/mcp`. Choose **No
+   authentication**, tick **I understand and want to continue**, then select
+   **Create as plugin**.
+3. In the chat input, type `@` and select the plugin by the name you gave it.
+   Then ask in your own words — a goal, a budget and what you already own:
 
    > A pour-over coffee setup for one or two cups, up to 6.5 million toman. I
    > already have a gooseneck kettle.
