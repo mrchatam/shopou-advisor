@@ -1,7 +1,7 @@
-name: Price or listing is wrong
-description: A price, stock state, seller or product detail does not match the listing
+name: Price or listing is wrong / قیمت یا آگهی اشتباه است
+description: A price, stock state, seller or product detail does not match the listing / قیمت، موجودی، فروشنده یا مشخصات با آگهی نمی‌خواند
 title: "[Price]: "
-labels: ["bug"]
+labels: ["price-data"]
 body:
   - type: markdown
     attributes:
@@ -10,14 +10,18 @@ body:
         answer says when it was read. If the answer is more than a few hours old,
         ask the assistant again first — the listed price may simply have moved.
 
+        قیمت‌ها همان لحظه از دیجی‌کالا خوانده می‌شوند و بی‌اطلاع تغییر می‌کنند؛ هر پاسخ
+        می‌گوید کِی خوانده شده. اگر پاسخ چند ساعت قدیمی است، اول دوباره بپرسید.
+
         A price is information, not an offer. The retailer's own page is the one
-        that counts at checkout.
+        that counts at checkout. / قیمت یک اطلاع است، نه پیشنهاد فروش؛ در پرداخت،
+        صفحهٔ خود فروشنده ملاک است.
 
   - type: input
     id: product-url
     attributes:
-      label: Product link
-      description: The Digikala page for the item, if you have it.
+      label: Product link / لینک کالا
+      description: The Digikala page for the item, if you have it. / صفحهٔ کالا در دیجی‌کالا.
       placeholder: https://www.digikala.com/product/dkp-...
     validations:
       required: true
@@ -25,8 +29,8 @@ body:
   - type: textarea
     id: answer-said
     attributes:
-      label: What did the assistant say?
-      description: The price, stock state, seller or specification it reported.
+      label: What did the assistant say? / دستیار چه گفت؟
+      description: The price, stock state, seller or specification it reported. / قیمت، موجودی، فروشنده یا مشخصاتی که گفت.
       placeholder: It said 3,650,000 toman from seller X, read 2 hours ago.
     validations:
       required: true
@@ -34,8 +38,8 @@ body:
   - type: textarea
     id: listing-says
     attributes:
-      label: What does the listing say now?
-      description: The value on the retailer's page, and when you checked it.
+      label: What does the listing say now? / الان آگهی چه می‌گوید؟
+      description: The value on the retailer's page, and when you checked it. / مقدار روی صفحه و زمانی که بررسی کردید.
       placeholder: The page shows 3,890,000 toman, checked at 21:10 IRST.
     validations:
       required: true
@@ -43,22 +47,22 @@ body:
   - type: dropdown
     id: kind
     attributes:
-      label: What is wrong?
+      label: What is wrong? / چه چیزی اشتباه است؟
       options:
-        - Price
-        - Stock state (available or out of stock)
-        - Seller
-        - Product specifications
-        - The item is missing from the answer
-        - Something else
+        - Price / قیمت
+        - Stock state / موجودی
+        - Seller / فروشنده
+        - Product specifications / مشخصات کالا
+        - The item is missing from the answer / کالا در پاسخ نیامده
+        - Something else / چیز دیگر
     validations:
       required: true
 
   - type: input
     id: when
     attributes:
-      label: When did you see it?
-      description: Local date and time with the timezone.
+      label: When did you see it? / چه زمانی دیدید؟
+      description: Local date and time with the timezone. / تاریخ و ساعت محلی با منطقهٔ زمانی.
       placeholder: 2026-10-23 21:15 IRST
     validations:
       required: true
@@ -66,7 +70,7 @@ body:
   - type: textarea
     id: more
     attributes:
-      label: Anything else?
-      description: A screenshot of the listing, or the sentence in the answer that was wrong.
+      label: Anything else? / نکتهٔ دیگر
+      description: A screenshot of the listing, or the sentence in the answer that was wrong. / عکس آگهی یا جملهٔ اشتباه در پاسخ.
     validations:
       required: false

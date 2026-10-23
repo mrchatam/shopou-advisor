@@ -1,13 +1,24 @@
-name: Question or suggestion
-description: Ask how something works, or suggest an improvement
+name: Question or suggestion / پرسش یا پیشنهاد
+description: Ask how something works, or suggest an improvement / بپرسید چیزی چطور کار می‌کند یا پیشنهاد بدهید
 title: "[Question]: "
 labels: ["question"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        For an open-ended conversation — comparing setups, sharing what worked —
+        [Discussions](https://github.com/mrchatam/shopou-advisor/discussions) fits
+        better than an issue.
+
+        برای گفت‌وگوی باز — مقایسهٔ چند چیدمان یا تعریف تجربه — بخش
+        [Discussions](https://github.com/mrchatam/shopou-advisor/discussions)
+        مناسب‌تر از ایشو است.
+
   - type: textarea
     id: question
     attributes:
-      label: Your question or idea
-      description: The more specific it is, the more useful the answer.
+      label: Your question or idea / پرسش یا ایدهٔ شما
+      description: The more specific it is, the more useful the answer. / هرچه مشخص‌تر باشد، پاسخ مفیدتر است.
       placeholder: Can it compare two complete setups side by side?
     validations:
       required: true
@@ -15,16 +26,7 @@ body:
   - type: textarea
     id: context
     attributes:
-      label: Context (optional)
-      description: What you were shopping for, or what you expected the answer to include.
+      label: Context (optional) / زمینه (اختیاری)
+      description: What you were shopping for, or what you expected the answer to include. / دنبال چه خریدی بودید یا انتظار داشتید پاسخ چه چیزی داشته باشد.
     validations:
       required: false
-
-  - type: dropdown
-    id: language
-    attributes:
-      label: Language
-      options:
-        - English
-        - Persian (فارسی)
-        - Both

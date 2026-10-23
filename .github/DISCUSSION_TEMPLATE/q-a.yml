@@ -1,0 +1,49 @@
+title: "[Q&A]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A question is usually answered fastest with the exact words you used.
+        Prices move, so include when you asked — an answer read yesterday may
+        simply be old.
+
+        پرسش را با همان جمله‌ای که نوشتید بفرستید و زمان پرسیدن را هم بنویسید؛
+        قیمت‌ها عوض می‌شوند. **توکن، رمز یا اطلاعات شخصی را ننویسید.**
+
+        For a broken connector or a wrong price, an issue is better — the forms
+        in the [issue chooser](https://github.com/mrchatam/shopou-advisor/issues/new/choose)
+        collect what is needed to reproduce it.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question / پرسش شما
+      description: What you asked the assistant, or what you want to know about it. / چه پرسیدید یا چه چیزی را می‌خواهید بدانید.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect? / چه انتظاری داشتید؟
+      description: The answer you were hoping for, or the part that surprised you. / پاسخی که انتظار داشتید یا بخشی که غیرمنتظره بود.
+    validations:
+      required: false
+
+  - type: input
+    id: when
+    attributes:
+      label: When did you ask? (optional) / چه زمانی پرسیدید؟ (اختیاری)
+      description: Local date and time with the timezone. / تاریخ و ساعت محلی با منطقهٔ زمانی.
+      placeholder: 2026-10-23 21:15 IRST
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where were you? / کجا بودید؟
+      options:
+        - The connector inside ChatGPT / کانکتور در ChatGPT
+        - A direct MCP client / کلاینت مستقیم MCP
+        - The public website / وب‌سایت
+        - Nowhere yet — just asking / هنوز هیچ‌جا، فقط می‌پرسم

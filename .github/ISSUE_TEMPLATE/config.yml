@@ -6,3 +6,6 @@ contact_links:
   - name: صفحهٔ پشتیبانی (فارسی)
     url: https://advisor.shopou.ir/fa/support
     about: پیش از نوشتن چه چیزهایی را بررسی کنید و چطور با گرداننده تماس بگیرید.
+  - name: Discussions / گفت‌وگو
+    url: https://github.com/mrchatam/shopou-advisor/discussions
+    about: For open-ended questions and ideas — پرسش‌های باز و پیشنهادها.

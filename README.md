@@ -1,5 +1,7 @@
 # Shopou Advisor
 
+**English** · [فارسی](README.fa.md)
+
 A shopping assistant for ChatGPT that plans a **purchase**, not a search. You say
 what you are setting up, what you already own and what you can spend; it reads
 live Digikala listings and answers with a complete set, an itemized total, and
@@ -47,6 +49,8 @@ Use the issue templates:
   does not match the listing.
 - **Question or suggestion** — anything else.
 
+Each form is available in English and Persian.
+
 Please include:
 
 - the local date and time, with the timezone;
@@ -64,6 +68,9 @@ information into an issue.** Nothing in a report needs them. A chat client does
 not show response headers, so inside ChatGPT the time of the message is the best
 identifier.
 
+For an open-ended question, [Discussions](https://github.com/mrchatam/shopou-advisor/discussions)
+is a better place than an issue.
+
 ## Privacy
 
 No account to create, no cookies, no analytics. The service keeps its cache and
@@ -71,6 +78,13 @@ counters in memory only, and writes nothing to a database or to disk. What is
 processed, what reaches Digikala and what is kept is written out at
 [advisor.shopou.ir/privacy](https://advisor.shopou.ir/privacy)
 ([فارسی](https://advisor.shopou.ir/fa/privacy)).
+
+## Community
+
+- [Contributing](CONTRIBUTING.md) — what this repository accepts, and what it does not.
+- [Support](SUPPORT.md) — where to get help, and what to check first.
+- [Security](SECURITY.md) — how to report a vulnerability privately.
+- [Code of conduct](CODE_OF_CONDUCT.md) — the standard every thread is held to.
 
 ## Security
 
