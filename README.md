@@ -93,5 +93,5 @@ on the [support page](https://advisor.shopou.ir/support) instead.
 
 ## License
 
-This repository contains no source code. The service is operated privately; no
-license is granted for the connector or its output.
+This repository contains no source code. The service is operated privately and
+no license is granted for the connector or its output — see [LICENSE](LICENSE).
